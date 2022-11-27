@@ -1,5 +1,5 @@
+import 'package:emojipopup/pages/homepage.dart';
 import 'package:flutter/material.dart';
-import 'package:emojipopup/utils/emoji.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,23 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Row(
-            children: [
-              Column(
-                children: const [
-                  EmojiCard(
-                    emoji: '😔',
-                  ),
-                ],
-              )
-            ],
-          ),
-        ),
-      ),
+      home: HomePage(),
     );
   }
 }

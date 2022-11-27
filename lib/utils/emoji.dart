@@ -8,12 +8,15 @@ class EmojiCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-          color: Colors.blue, borderRadius: BorderRadius.circular(12)),
+        color: Colors.blue[300],
+        borderRadius: BorderRadius.circular(15),
+      ),
       child: Text(
         emoji,
         style: const TextStyle(
-          fontSize: 20,
+          fontSize: 25,
         ),
       ),
     );

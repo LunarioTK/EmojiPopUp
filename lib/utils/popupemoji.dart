@@ -5,14 +5,22 @@ class PopUpEmoji extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(30),
-      decoration: BoxDecoration(
-        color: Colors.blue[300],
+    return AlertDialog(
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
       ),
-      child: const Text(
-        '😔',
+      contentPadding: const EdgeInsets.all(80),
+      backgroundColor: Colors.blue[300],
+      content: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [
+          Text(
+            '😔',
+            style: TextStyle(
+              fontSize: 60,
+            ),
+          ),
+        ],
       ),
     );
   }

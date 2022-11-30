@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class PopUpEmoji extends StatelessWidget {
-  const PopUpEmoji({super.key});
+  final String emoji;
+
+  const PopUpEmoji({super.key, required this.emoji});
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +15,10 @@ class PopUpEmoji extends StatelessWidget {
       backgroundColor: Colors.blue[300],
       content: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           Text(
-            '😔',
-            style: TextStyle(
+            emoji,
+            style: const TextStyle(
               fontSize: 60,
             ),
           ),

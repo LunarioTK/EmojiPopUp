@@ -11,11 +11,19 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final String controller = '';
-  void showPopup() {
+  List<String> emojis = [
+    '😔',
+    '😊',
+    '😁',
+    '😃',
+  ];
+  void showPopup(int pos) {
     showDialog(
         context: context,
         builder: ((context) {
-          return const PopUpEmoji();
+          return PopUpEmoji(
+            emoji: emojis[pos],
+          );
         }));
   }
 
@@ -31,11 +39,21 @@ class _HomePageState extends State<HomePage> {
               TextButton(
                 onPressed: () {
                   setState(() {
-                    showPopup();
+                    showPopup(0);
                   });
                 },
-                child: const EmojiCard(
-                  emoji: '😔',
+                child: EmojiCard(
+                  emoji: emojis[0],
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  setState(() {
+                    showPopup(1);
+                  });
+                },
+                child: EmojiCard(
+                  emoji: emojis[1],
                 ),
               )
             ],
